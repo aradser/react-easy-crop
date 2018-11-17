@@ -22,7 +22,7 @@ class Cropper extends React.Component {
   rafDragTimeout = null
   rafZoomTimeout = null
   state = {
-    cropSize: null,
+    cropSize: this.props.cropSize,
   }
 
   componentDidMount() {
@@ -69,7 +69,7 @@ class Cropper extends React.Component {
         naturalWidth: this.image.naturalWidth,
         naturalHeight: this.image.naturalHeight,
       }
-      const cropSize = getCropSize(this.image.width, this.image.height, this.props.aspect)
+      const cropSize = this.state.cropSize || getCropSize(this.image.width, this.image.height, this.props.aspect)
       this.setState({ cropSize }, this.recomputeCropPosition)
     }
     if (this.container) {
