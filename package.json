@@ -1,5 +1,5 @@
 {
-  "name": "react-easy-crop",
+  "name": "@aradser/react-easy-crop",
   "version": "1.6.0",
   "description": "A React component to crop images with easy interactions",
   "main": "dist/index.js",
@@ -36,6 +36,7 @@
     "react-emotion": "^9.2.3"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
